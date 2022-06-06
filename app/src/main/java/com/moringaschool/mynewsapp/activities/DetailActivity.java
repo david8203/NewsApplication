@@ -1,4 +1,4 @@
-package com.moringaschool.mynewsapp;
+package com.moringaschool.mynewsapp.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +23,8 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.moringaschool.mynewsapp.R;
+import com.moringaschool.mynewsapp.Utils;
 
 public class DetailActivity extends AppCompatActivity implements AppBarLayout.OnOffsetChangedListener{
 

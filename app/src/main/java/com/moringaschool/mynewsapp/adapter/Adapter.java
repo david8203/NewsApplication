@@ -1,4 +1,4 @@
-package com.moringaschool.mynewsapp;
+package com.moringaschool.mynewsapp.adapter;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -21,6 +21,8 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
+import com.moringaschool.mynewsapp.R;
+import com.moringaschool.mynewsapp.Utils;
 import com.moringaschool.mynewsapp.models.Article;
 
 import java.util.List;
