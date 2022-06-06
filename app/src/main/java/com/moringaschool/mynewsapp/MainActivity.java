@@ -2,6 +2,7 @@ package com.moringaschool.mynewsapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,7 +16,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.SearchView;
+
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,11 +33,12 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener{
+
     public static final String API_KEY = "57b300334e5f4db09040bfd047e31380";
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private List<Article> articles = new ArrayList<>();
-    private RecyclerView.Adapter adapter;
+    private Adapter adapter;
     private String TAG = MainActivity.class.getSimpleName();
     private SwipeRefreshLayout swipeRefreshLayout;
     private TextView topHeadLines;
@@ -59,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
 
         onLoadingSwipeRefresh("");
     }
+
     public void LoadJson(final String keyword){
 
         swipeRefreshLayout.setRefreshing(true);
@@ -99,14 +102,14 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
             }
 
             @Override
-            public void onFailure(Call<News> call, @NonNull Throwable t) {
+            public void onFailure(Call<News> call, Throwable t) {
                 swipeRefreshLayout.setRefreshing(false);
             }
         });
     }
 
     private void initListener(){
-        Adapter.setOnItemClickListener(new Adapter.OnItemClickListener() {
+        adapter.setOnItemClickListener(new Adapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
 

@@ -155,7 +155,7 @@ public class DetailActivity extends AppCompatActivity implements AppBarLayout.On
                                 Intent i = new Intent(Intent.ACTION_SEND);
                                 i.setType("text/plan");
                                 i.putExtra(Intent.EXTRA_SUBJECT, mSource);
-                                String body = mTitle + "\n" + mUrl + "\n" + "Share from the DNA" + "\n";
+                                String body = mTitle + "\n" + mUrl + "\n" + "Share from the TheNews" + "\n";
                                 i.putExtra(Intent.EXTRA_TEXT, body);
                                 startActivity(Intent.createChooser(i, "Share with: "));
 
