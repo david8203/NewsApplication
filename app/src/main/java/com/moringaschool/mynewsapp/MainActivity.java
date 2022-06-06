@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -98,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
             }
 
             @Override
-            public void onFailure(Call<News> call, Throwable t) {
+            public void onFailure(Call<News> call, @NonNull Throwable t) {
                 swipeRefreshLayout.setRefreshing(false);
             }
         });
@@ -163,7 +164,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_profile:
-                Intent intent = new Intent(this,OtpActivity.class);
+                Intent intent = new Intent();
                 startActivity(intent);
                 break;
             case R.id.action_setting:
