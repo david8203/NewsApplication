@@ -91,4 +91,78 @@ public class DetailActivity extends AppCompatActivity implements AppBarLayout.On
         time.setText(mSource + author + " \u2022 " + Utils.DateToTimeFormat(mDate));
         initWebView(mUrl);
         }
+        private void initWebView(String url){
+                WebView webView = findViewById(R.id.webView);
+                webView.getSettings().setLoadsImagesAutomatically(true);
+                webView.getSettings().setJavaScriptEnabled(true);
+                webView.getSettings().setDomStorageEnabled(true);
+                webView.getSettings().setSupportZoom(true);
+                webView.getSettings().setBuiltInZoomControls(true);
+                webView.getSettings().setDisplayZoomControls(false);
+                webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+                webView.setWebViewClient(new WebViewClient());
+                webView.loadUrl(url);
+        }
+
+        @Override
+        public void onBackPressed() {
+                super.onBackPressed();
+                supportFinishAfterTransition();
+        }
+
+        @Override
+        public boolean onSupportNavigateUp() {
+                onBackPressed();
+                return true;
+        }
+
+        @Override
+        public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+
+                int maxScroll = appBarLayout.getTotalScrollRange();
+                float percentage = (float) Math.abs(verticalOffset)/(float) maxScroll;
+
+                if (percentage == 1f && isHideToolbarView){
+                        date_behavior.setVisibility(View.GONE);
+                        titleAppbar.setVisibility(View.VISIBLE);
+                        isHideToolbarView = !isHideToolbarView;
+                }
+                else if (percentage < 1f && isHideToolbarView){
+                        date_behavior.setVisibility(View.VISIBLE);
+                        titleAppbar.setVisibility(View.GONE);
+                        isHideToolbarView = !isHideToolbarView;
+                }
+        }
+
+        @Override
+        public boolean onCreateOptionsMenu(Menu menu) {
+                getMenuInflater().inflate(R.menu.menu_news, menu);
+                return true;
+        }
+
+        @Override
+        public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+                int id = item.getItemId();
+                if (id == R.id.view_web){
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        i.setData(Uri.parse(mUrl));
+                        startActivity(i);
+                        return true;
+                }
+                else if (id == R.id.share){
+                        try {
+                                Intent i = new Intent(Intent.ACTION_SEND);
+                                i.setType("text/plan");
+                                i.putExtra(Intent.EXTRA_SUBJECT, mSource);
+                                String body = mTitle + "\n" + mUrl + "\n" + "Share from the DNA" + "\n";
+                                i.putExtra(Intent.EXTRA_TEXT, body);
+                                startActivity(Intent.createChooser(i, "Share with: "));
+
+                        }catch (Exception e){
+                                Toast.makeText(this, "Sorry cannot be share", Toast.LENGTH_SHORT).show();
+                        }
+                }
+                return super.onOptionsItemSelected(item);
+        }
 }
