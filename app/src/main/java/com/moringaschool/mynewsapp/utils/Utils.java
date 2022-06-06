@@ -1,4 +1,4 @@
-package com.moringaschool.mynewsapp;
+package com.moringaschool.mynewsapp.utils;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;

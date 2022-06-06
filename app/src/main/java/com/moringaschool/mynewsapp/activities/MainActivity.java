@@ -21,7 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.moringaschool.mynewsapp.R;
-import com.moringaschool.mynewsapp.Utils;
+import com.moringaschool.mynewsapp.utils.Utils;
 import com.moringaschool.mynewsapp.adapter.Adapter;
 import com.moringaschool.mynewsapp.api.ApiClient;
 import com.moringaschool.mynewsapp.api.ApiInterface;

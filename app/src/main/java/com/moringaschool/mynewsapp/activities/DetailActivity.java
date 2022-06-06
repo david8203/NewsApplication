@@ -24,7 +24,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.moringaschool.mynewsapp.R;
-import com.moringaschool.mynewsapp.Utils;
+import com.moringaschool.mynewsapp.utils.Utils;
 
 public class DetailActivity extends AppCompatActivity implements AppBarLayout.OnOffsetChangedListener{
 
