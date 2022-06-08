@@ -59,7 +59,7 @@ ___
 src="app/src/main/res/drawable/screenshot1.jpg"
 alt="Sample Screenshot"
 title="Headlines"
-style="display: inline-block; margin: 0 auto; max-width: 300px">
+style="display: inline-block; margin: 0 auto; max-width: 80px; max-height: 100px">
 ## Api Documentation
 [Api Docs](https://newsapi.org/docs/endpoints/sources)
 ___
