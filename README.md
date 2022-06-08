@@ -55,7 +55,11 @@ You need to create a **[News API key](https://newsapi.org/docs/endpoints/sources
 ___
 ## Screenshots
 
-![Sample Screenshot](app/src/main/res/drawable/screenshot1.jpg)
+<img
+src="app/src/main/res/drawable/screenshot1.jpg"
+alt="Sample Screenshot"
+title="Headlines"
+style="display: inline-block; margin: 0 auto; max-width: 300px">
 ## Api Documentation
 [Api Docs](https://newsapi.org/docs/endpoints/sources)
 ___
