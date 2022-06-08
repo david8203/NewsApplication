@@ -1,20 +1,20 @@
-#Project Name
+# Project Name
 The NeWS
 ___
-##Project Description
+# Project Description
 It is a an application which an API ia called and the various news are displayed.
 ___
-##Project Owner
+# Project Owner
 David Ndungu
 ___
-##Technologies Used
+## Technologies Used
 Android
 Gradle
 Maven
 Retrofit
 Postman
 ___
-##Languages Used
+## Languages Used
 Java Android
 ___
 ## Getting Started
@@ -23,7 +23,7 @@ use `git clone`
 * clone it in your desired repository and launch it with your desired IDE.
 * create a device manager if it does not exist and run the project.
 ___
-##Gradle Dependencies
+## Gradle Dependencies
 
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
@@ -53,13 +53,16 @@ ___
 ## Add News Api
 You need to create a **[News API key](https://newsapi.org/docs/endpoints/sources)** and `add` it in the mainActivity.
 ___
-##Api Documentation
+## Screenshots
+
+![Sample Screenshot](app/src/main/res/drawable/screenshot1.jpg)
+## Api Documentation
 [Api Docs](https://newsapi.org/docs/endpoints/sources)
 ___
 ## Bugs
 * no known bugs detected.
 ___
-##Features
+## Features
 The News has categories of news which include:
 *Entertainment
 *Science
