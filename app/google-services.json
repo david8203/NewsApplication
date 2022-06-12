@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "766656014368",
+    "project_id": "mynewsapp-f63ec",
+    "storage_bucket": "mynewsapp-f63ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766656014368:android:b866259130a96791113445",
+        "android_client_info": {
+          "package_name": "com.moringaschool.mynewsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "766656014368-al7nj3p4kstprarh4u4pcmv3esbd8p1k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBs9v6PcxrvidPOfzibUceQBV16XPaNwWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "766656014368-al7nj3p4kstprarh4u4pcmv3esbd8p1k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
