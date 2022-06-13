@@ -46,6 +46,7 @@
 
                 <ImageView
                     android:scaleType="centerCrop"
+                    android:src="@drawable/top_shadow"
                     android:layout_width="match_parent"
                     android:layout_height="70dp" />
 
@@ -54,6 +55,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:layout_alignBottom="@id/img"
+                    android:src="@drawable/bottom_shadow"
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="1dp"
                     android:scaleType="centerCrop"
@@ -207,6 +209,7 @@
         android:layout_below="@id/img"
         android:layout_width="wrap_content"
         android:padding="5dp"
+        android:background="@drawable/round_white"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginRight="20dp"
