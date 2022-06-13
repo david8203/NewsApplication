@@ -23,6 +23,21 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".OtpActivity"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RegistrationActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SignInActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LogRegActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".activities.DetailActivity"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
