@@ -31,6 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:id="@+id/shadow_bottom"
+                android:src="@drawable/bottom_shadow"
                 android:layout_alignBottom="@+id/img"/>
 
             <ProgressBar
@@ -63,6 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/img"
                 android:padding="5dp"
+                android:background="@drawable/round_white"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="-50dp">
@@ -79,6 +81,8 @@
                     android:id="@+id/publishedAt"
                     android:textColor="#606060"
                     android:textStyle="bold"
+                    android:fontFamily="sans-serif-light"
+                    app:fontFamily="@font/asap_bold"
                     android:layout_marginLeft="27dp"
                     android:layout_marginRight="10dp"
                     android:text="01 January 1990" />
@@ -126,7 +130,7 @@
                 android:text="Source"
                 android:textColor="@color/colorTextTilte"
                 android:textStyle="bold"
-                app:fontFamily="asap_bold" />
+                app:fontFamily="@font/asap_bold" />
 
             <TextView
                 android:layout_width="wrap_content"
