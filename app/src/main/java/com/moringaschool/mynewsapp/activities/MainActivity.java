@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.moringaschool.mynewsapp.OtpActivity;
 import com.moringaschool.mynewsapp.R;
 import com.moringaschool.mynewsapp.utils.Utils;
 import com.moringaschool.mynewsapp.adapter.Adapter;
@@ -37,7 +38,7 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener{
 
-    public static final String API_KEY = "PUT_YOUR_API_KEY_HERE";
+    public static final String API_KEY = "57b300334e5f4db09040bfd047e31380";
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private List<Article> articles = new ArrayList<>();
@@ -170,7 +171,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_profile:
-                Intent intent = new Intent();
+                Intent intent = new Intent(this, OtpActivity.class);
                 startActivity(intent);
                 break;
             case R.id.action_setting:
