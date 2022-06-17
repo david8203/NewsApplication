@@ -34,16 +34,6 @@
             android:name=".LogRegActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".SplashActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".activities.DetailActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.MainActivity" />
