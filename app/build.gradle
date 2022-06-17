@@ -60,7 +60,6 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.github.rey5137:material:1.0.0'
     implementation 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
-
     implementation 'com.github.joielechong:countrycodepicker:2.4.1'
 
 }

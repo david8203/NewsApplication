@@ -11,6 +11,7 @@ import android.widget.ImageView;
 public class SplashActivity extends AppCompatActivity {
     Animation anim;
     ImageView imageView;
+    private static int SPLASH_TIME_OUT = 2500;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,13 +28,14 @@ public class SplashActivity extends AppCompatActivity {
                 Intent intent = new Intent(SplashActivity.this,SignInActivity.class);
                 startActivity(intent);
                 finish();
-            },
+            }
 
             @Override
             public void onAnimationRepeat(Animation animation) {
             }
+
         });
         imageView.startAnimation(anim);
-    }
+
     }
 }
