@@ -2,6 +2,7 @@ package com.moringaschool.mynewsapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -16,5 +17,23 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         imageView=(ImageView)findViewById(R.id.imageView2); // Declares the imageView to show the animation.
         anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in); // Create the animation.
+        anim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Intent intent = new Intent(SplashActivity.this,SignInActivity.class);
+                startActivity(intent);
+                finish();
+            },
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+            }
+        });
+        imageView.startAnimation(anim);
+    }
     }
 }
